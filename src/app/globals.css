@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Skinrize Design Tokens */
+  --bg-cream: #fffff5;
+  --olive-dark: #4a5b35;
+  --olive-muted: #717f5d;
+  --card-bg: #e4e7d8;
+  --card-border: #cfd1b4;
+  --border-light: #e7e9d4;
+  --tag-bg: #f7f7e4;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--olive-dark);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #4a5b35;
+  color: #fffff5;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom Utilities matching reference */
+.bg-cream {
+  background-color: #fffff5;
+}
+
+.text-olive-dark {
+  color: #4a5b35;
+}
+
+.text-olive-muted {
+  color: #717f5d;
+}
+
+.bg-card {
+  background-color: #e4e7d8;
+}
+
+.border-card {
+  border-color: #cfd1b4;
+}
+
+.bg-olive-dark {
+  background-color: #4a5b35;
+}
+
+.border-olive-dark {
+  border-color: #4a5b35;
+}
+
+.border-light-sage {
+  border-color: #e7e9d4;
+}
+
+/* Smooth marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
